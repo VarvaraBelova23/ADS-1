@@ -2,13 +2,12 @@
 #include <cstdint>
 #include "alg.h"
 
-
 bool checkPrime(uint64_t value) {
     if (value <= 1) {
         return false;
     }
-    for (uint64_t j = 2; j * j <= value; j++) {
-        if (value % j == 0) {
+    for (uint64_t i = 2; i * i <= value; i++) {
+        if (value % i == 0) {
             return false;
         }
     }
